@@ -9,3 +9,10 @@ The code in this repo meant to be a reference point for anyone following along w
 ## To Start
 
 1. cd into `catch-of-the-day` and follow along with the videos
+1. launch server by running `yarn install`
+
+## Lesson 2
+
+Component is a reusable piece of your website. React dev tools can show you the custom components of a React site. Designers can work on seperate components. Components can have data and event listeners.
+
+App component is the parent component. It contains all the fish in the state. Changes in state are reflected across the entire app.
