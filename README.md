@@ -51,3 +51,9 @@ Classes are added by using the `<form className="store-selector">` since `class`
 
 Comments are made by `{/* JSX COMMENT */}`
 
+## Lesson 5
+
+Add styles
+
+## Lesson 6
+
