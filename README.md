@@ -70,3 +70,30 @@ We pass data to our components via `props`.
 // in our Header component we access props
 <h3 className="tagline">{this.props.tagline}</h3>
 ```
+## Lesson 8
+
+Stateless functional components can be used for simple rendering html to the DOM.
+
+We can refactor our Header component to a stateless component by:
+
+* by removing the `class` and `rendor` method
+* Add a const named Header and arrow function
+* pass in `props` in the parameters
+
+```javascript
+const Header = (props) => {
+    return (
+      <header className="top">
+        <h1>
+          Catch
+          <span className="ofThe">
+            <span className="of">of</span>
+            <span className="the">the</span>
+          </span>
+          Day
+        </h1>
+        <h3 className="tagline"><span>{props.tagline}</span></h3>
+      </header>
+    )
+}
+```
