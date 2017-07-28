@@ -57,3 +57,16 @@ Add styles
 
 ## Lesson 6
 
+Adds `Header`, `Order`, and `Inventory` components to our main `App` component.
+
+## Lesson 7
+
+We pass data to our components via `props`.
+
+```javascript
+// in our App component we pass props
+<Header tagline="Fresh Seafood Market"/>
+
+// in our Header component we access props
+<h3 className="tagline">{this.props.tagline}</h3>
+```
