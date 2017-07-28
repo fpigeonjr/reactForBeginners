@@ -42,3 +42,12 @@ Recommend to store components seperately in the `src/components/StorePicker.js`
 Then we import it to our index.js like this:
 
 `import StorePicker from './components/StorePicker'`
+
+## Lesson 4
+
+We work more on our StorePicker component using JSX. In the `render` method, we can only have one parent element and the entire block must be wrapped in `()`.
+
+Classes are added by using the `<form className="store-selector">` since `class` is reserved by javascript.
+
+Comments are made by `{/* JSX COMMENT */}`
+
