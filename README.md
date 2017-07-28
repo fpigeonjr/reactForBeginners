@@ -97,3 +97,18 @@ const Header = (props) => {
     )
 }
 ```
+
+## Lesson 9
+
+React Router is used to show and hide components anywhere in your application depending on the url. Everything in React is a component even React Router.
+
+```javascript
+import { BrowserRouter, Match, Miss } from 'react-router'
+<BrowserRouter>
+  <div>
+    <Match exactly pattern="/" component={StorePicker} />
+    <Match pattern="/store/:storeId" component={App} />
+    <Miss component={NotFound}/>
+  </div>
+</BrowserRouter>
+```
