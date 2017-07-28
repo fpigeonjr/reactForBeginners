@@ -16,3 +16,29 @@ The code in this repo meant to be a reference point for anyone following along w
 Component is a reusable piece of your website. React dev tools can show you the custom components of a React site. Designers can work on seperate components. Components can have data and event listeners.
 
 App component is the parent component. It contains all the fish in the state. Changes in state are reflected across the entire app.
+
+## Lesson 3
+
+Build our first component `StorePicker`. Our mount point is the `div#main`. We use the `render` method to tell React where to send the component.
+
+`render(<StorePicker/>, document.querySelector('#main') )`
+
+> StorePicker component
+
+```javascript
+import React from 'react'
+
+class StorePicker extends React.Component {
+  render() {
+    return <p>Hello</p>
+  }
+}
+
+export default StorePicker
+```
+
+Recommend to store components seperately in the `src/components/StorePicker.js`
+
+Then we import it to our index.js like this:
+
+`import StorePicker from './components/StorePicker'`
