@@ -187,5 +187,10 @@ React uses html push state so the page doesn't reload itself
 
 This will be a video you watch over and over
 
+State is a representation of your data in the app. Each component can have its own state. Think of it as one object that holds all of the data.
+
+Create the addFishForm.
+
+
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
