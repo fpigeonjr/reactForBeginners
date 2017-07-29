@@ -185,11 +185,15 @@ React uses html push state so the page doesn't reload itself
 
 ## Lesson 12: State
 
-This will be a video you watch over and over
+This will be a video you watch over and over 🐠🐠🐠
 
 State is a representation of your data in the app. Each component can have its own state. Think of it as one object that holds all of the data.
 
-Create the addFishForm.
+We need to share State with other components so a good place to do that is your Master component and for us that is the **App Component**.
+
+GetInitialState is a way to let React know of the different states for the app. We add it to the App class via a **constructor**.
+
+Pass things down to child components via **props**.
 
 
 [ReactForBeginners.com]: https://ReactForBeginners.com/
