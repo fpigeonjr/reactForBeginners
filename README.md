@@ -139,9 +139,11 @@ class StorePicker extends React.Component {
 }
 ```
 
-Or you can bind this directly on the form submit like this.
+Or you can bind this directly on the form submit and remove the **constructor**.
 
- `<form className="store-selector" onSubmit={ this.goToStore.bind(this) } >`
+ ```javascript
+<form className="store-selector" onSubmit={ this.goToStore.bind(this) } >
+```
 
 
 
