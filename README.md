@@ -183,7 +183,7 @@ this.context.router.transitionTo(`store/${storeId}`)
 
 React uses html push state so the page doesn't reload itself
 
-## Lesson 12: State
+## Lesson 13: State
 
 This will be a video you watch over and over 🐠🐠🐠
 
@@ -194,6 +194,9 @@ We need to share State with other components so a good place to do that is your 
 GetInitialState is a way to let React know of the different states for the app. We add it to the App class via a **constructor**.
 
 Pass things down to child components via **props**.
+
+## Lesson 14: Load in sample fishes
+
 
 
 [ReactForBeginners.com]: https://ReactForBeginners.com/
