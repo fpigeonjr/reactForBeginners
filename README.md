@@ -145,6 +145,25 @@ Or you can bind this directly on the form submit and remove the **constructor**.
 <form className="store-selector" onSubmit={ this.goToStore.bind(this) } >
 ```
 
+## Lesson 11
 
+In order to route our form to new url we bring in the router.
+React Router could use Redirect component or you can use an imperative api.
+
+You can gain access to the router in your component
+
+```javascript
+StorePicker.contextTypes = {
+  router:React.PropTypes.object
+}
+```
+then in our goToStore method we use the router to the store
+
+```javascript
+//transition from / to /store/:storeId
+this.context.router.transitionTo(`store/${storeId}`)
+```
+
+React uses html push state so the page doesn't reload itself
 
 [fb-events]: https://facebook.github.io/react/docs/events.html
