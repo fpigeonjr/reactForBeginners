@@ -115,7 +115,7 @@ import { BrowserRouter, Match, Miss } from 'react-router'
 
 ## Lesson 10
 
-[Facebook Events Docs] [fb-events]
+[Facebook Events Docs][fb-events]
 
 Events are attached inline using **onClick** or **onSubmit** evcent handler.
 
