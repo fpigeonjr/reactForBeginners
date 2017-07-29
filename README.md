@@ -112,3 +112,37 @@ import { BrowserRouter, Match, Miss } from 'react-router'
   </div>
 </BrowserRouter>
 ```
+
+## Lesson 10
+
+[Facebook Events Docs] [fb-events]
+
+Events are attached inline using **onClick** or **onSubmit** evcent handler.
+
+Get access to form data using a **ref**.
+
+Ok so to reference this in your custom methods you would setup a contructor to bind to this.
+
+```javascript
+class StorePicker extends React.Component {
+  constructor() {
+    super()
+    this.goToStore =this.goToStore.bind(this)
+  }
+  goToStore( event ) {
+    event.preventDefault()
+    // grab text from the box
+    console.log(this.storeInput)
+  }
+  //Form input
+  <input type="text" required placeholder="Store Name" defaultValue={ getFunName() } ref={ (input) => {this.storeInput = input} } />
+}
+```
+
+Or you can bind this directly on the form submit like this.
+
+ `<form className="store-selector" onSubmit={ this.goToStore.bind(this) } >`
+
+
+
+[fb-events]: https://facebook.github.io/react/docs/events.html
