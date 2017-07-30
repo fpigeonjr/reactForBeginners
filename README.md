@@ -197,7 +197,21 @@ Pass things down to child components via **props**.
 
 ## Lesson 14: Load in sample fishes
 
+## Lesson 15: Display Fish
 
+If you want to loop over something, you need an array `Object.keys` and loop via `.map`. This method takes in a key and outputs Fish components.
+
+```javascript
+
+<ul className="list-of-fishes">
+  {
+    Object
+    .keys(this.state.fishes)
+    .map(key => <Fish key={key} details={this.state.fishes[key]} />)
+  }
+</ul>
+
+```
 
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
