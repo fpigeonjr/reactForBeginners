@@ -223,7 +223,7 @@ To invoke the `addToOrder` method we can't use `key` from the props we send to t
 
 ## Lesson 17: Display our Order
 
-
+To build the Order compoment we need to pass in the fishes and the order state. In our Order component we build logic to calculate the total order and display the fish and appropriate pounds.
 
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
