@@ -199,7 +199,7 @@ Pass things down to child components via **props**.
 
 ## Lesson 15: Display Fish
 
-If you want to loop over something, you need an array `Object.keys` and loop via `.map`. This method takes in a key and outputs Fish components.
+If you want to loop over something, you need an array `Object.keys` and loop via `.map`. This method takes in a key and outputs Fish components. React will yell at you if the component are not unique so we do that by adding the `key={keys}`. We pass the state of the fish via `details`.
 
 ```javascript
 
@@ -214,6 +214,14 @@ If you want to loop over something, you need an array `Object.keys` and loop via
 ```
 
 ## Lesson 16: Order Button
+
+Update our **Fish** component to dynamically set **Add to Order** functionality based on the fish's availablity.
+
+We build an `addtoOrder` method in the App.js file. It adds one pound of the selected fish and adds it to the order state.
+
+To invoke the `addToOrder` method we can't use `key` from the props we send to the component. Instead we have to create our own and in this case we make one up called `index={key}`.
+
+## Lesson 17: Display our Order
 
 
 
