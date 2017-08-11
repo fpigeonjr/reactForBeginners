@@ -252,6 +252,10 @@ componentWillUnmount()
 
 ```
 
+## Lesson 19: HTML 5 Local Storage
+
+
+
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
 [firebase]: https://firebase.google.com/
