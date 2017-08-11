@@ -28,14 +28,14 @@ class Order extends React.Component {
 
   render()
   {
-    let orderIds = Object.keys(this.props.order)
-    let total = orderIds.reduce((prevTotal, key) => {
-      let fish = this.props.fishes[key]
-      let count = this.props.order[key]
-      let isAvailble = fish && fish.status === 'available'
+    const orderIds = Object.keys(this.props.order)
+    const total = orderIds.reduce((prevTotal, key) => {
+      const fish = this.props.fishes[key]
+      const count = this.props.order[key]
+      const isAvailble = fish && fish.status === 'available'
       if (isAvailble) {
         // if available return the new amount or 0 if the fish was deleted
-        return prevTotal + (count + fish.price || 0 )
+        return prevTotal + (count * fish.price || 0 )
       }
       // or just return the last amount
       return prevTotal
