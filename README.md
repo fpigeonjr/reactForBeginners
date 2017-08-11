@@ -225,5 +225,34 @@ To invoke the `addToOrder` method we can't use `key` from the props we send to t
 
 To build the Order compoment we need to pass in the fishes and the order state. In our Order component we build logic to calculate the total order and display the fish and appropriate pounds.
 
+## Lesson 18: Hook Up Firebase
+
+In this lesson we setup [firebase][firebase] which will be our realtime backend for our fishes state.
+
+After we create our firebase project we add the apikey, authDomain, and databaseURL to a new file called `/src/base.js`.
+
+In our `app.js` we will use React's *componentWillMount* method to connect to firebase. To learn more about Reacts component states goto the [docs][fb-component].
+We also learn to use *componentWillUnmount* when we connect to a different store.
+
+```javascript
+
+componentWillMount()
+{
+  this.ref = base.syncState(`${this.props.params.storeId}/fishes`,
+  {
+    context: this,
+    state: 'fishes'
+  })
+}
+
+componentWillUnmount()
+{
+  base.removeBinding(this.ref)
+}
+
+```
+
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
+[firebase]: https://firebase.google.com/
+[fb-component]: https://facebook.github.io/react/docs/react-component.html
