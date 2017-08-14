@@ -254,7 +254,43 @@ componentWillUnmount()
 
 ## Lesson 19: HTML 5 Local Storage
 
+We can store order data using html5 local storage. We'll use Reacts lifecycle hooks to keep track of state via *componentWillUpdate*. This will run whenever props or state changes.
 
+To store items in html5 local storage we use localStorage which stores key-value pairs.
+
+`localStorage.setItem('frank', 'is really cool') // to set an item`
+
+and then to retrieve it we use
+
+`localStorage.getItem('frank') // is really cool`
+
+Since we can't store objects in localStorage we have to convert it to a string via stringify.
+
+```javascript
+
+componentWillUpdate(nextProps, nextState)
+{
+  // set our local Storage
+  localStorage.setItem(`order-${this.props.params.storeId}`,
+    JSON.stringify(nextState.order))
+}
+
+```
+
+then when we retrive localStorage we have to convert to an object via parse
+
+```javascript
+
+// check if there is any order data in local Storage
+const localStorageRef = localStorage.getItem(`order-${this.props.params.storeId}`)
+if (localStorageRef) {
+  // update our order components order state
+  this.setState({
+    order: JSON.parse(localStorageRef)
+  })
+}
+
+```
 
 [ReactForBeginners.com]: https://ReactForBeginners.com/
 [fb-events]: https://facebook.github.io/react/docs/events.html
