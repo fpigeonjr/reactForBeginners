@@ -1,6 +1,6 @@
 {
   "root": "build/",
   "routes": {
-    "catch-of-the-day/**": "index.html"
+    "/**": "index.html"
   }
 }
